@@ -14,13 +14,12 @@ for N in N_values:
 
 
 plt.figure(figsize=(8, 5))
-plt.loglog(N_values, errors, 'o-', label='Uppmätt fel |V_MC - V_exakt|')
-plt.loglog(N_values, std_errors, 's--', label=r'Standardfel ($\hat{\sigma}/\sqrt{N}$)')
-plt.loglog(N_values, 1.0 / np.sqrt(N_values), 'k:', label=r'Teoretisk referens $\mathcal{O}(N^{-1/2})$')
+plt.loglog(N_values, errors, 'o-', label='measured error')
+plt.loglog(N_values, std_errors, 's--', label=r'standard error')
+plt.loglog(N_values, 1.0 / np.sqrt(N_values), 'k:', label=r'Theoretical error')
 
-plt.xlabel('Antal samplingbanor (N)')
-plt.ylabel('Fel')
-plt.title('Del 1: Samplingsfel som funktion av N')
+plt.xlabel('Number of samples (N)')
+plt.ylabel('Error')
 plt.grid(True, which="both", ls=":")
 plt.legend()
 plt.show()

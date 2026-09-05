@@ -10,7 +10,6 @@ r = 0.1
 sigma = 0.25
 T = 0.5
 gamma = 1
-S_t = S0
 
 
 
@@ -31,3 +30,4 @@ def euler(S0,r,sigma,gamma,T,M,N):
 
     return np.exp(-r * T)*np.maximum(S-K, 0)
 
+b = bsexact(sigma, r, K, T, S0)

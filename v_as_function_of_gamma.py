@@ -11,5 +11,6 @@ for i in gamma_values:
 plt.xlabel('gamma values')
 plt.ylabel('price of option')
 plt.plot(gamma_values, option_prices, 'o--')
+plt.grid()
 plt.show()
 

@@ -15,16 +15,13 @@ for M in M_values:
 
 
 plt.figure(figsize=(8, 5))
-plt.loglog(dt_values, errors, 's-', color='tab:red', label=r'Euler diskretiseringsfel |$\bar{V} - V_{exakt}$|')
+plt.loglog(dt_values, errors, 's-', color='tab:red', label=r'Euler discretization error ')
 
-# Teoretisk referenslinje för svag konvergens: O(dt^1)
 ref_slope = dt_values * (errors[0] / dt_values[0])
-plt.loglog(dt_values, ref_slope, 'k--', label=r'Teoretisk referens $\mathcal{O}(\Delta t^1)$')
+plt.loglog(dt_values, ref_slope, 'k--', label=r'Theoretical')
 
-plt.xlabel(r'Tidssteg ($\Delta t$)')
-plt.ylabel('Diskretiseringsfel (Bias)')
-plt.title(r'Del 2: Diskretiseringsfel som funktion av tidssteg $\Delta t$')
+plt.xlabel(r'Timestep')
+plt.ylabel('Diskretidiscretization error')
 plt.grid(True, which="both", ls=":")
 plt.legend()
-plt.tight_layout()
 plt.show()
