@@ -11,8 +11,6 @@ for M in M_values:
     
     errors.append(np.abs(np.mean(e) - b))
     
-    std_errors.append(np.std(e, ddof=1) / np.sqrt(N))
-
 
 plt.figure(figsize=(8, 5))
 plt.loglog(dt_values, errors, 's-', color='tab:red', label=r'Euler discretization error ')
